@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" id="ct1" onclick="on();">
+       <span class="slider round"></span>
+    </label><br>
+
+    <label class="switch">
+        <input type="checkbox" id="ct2" onclick="on();">
+        <span class="slider round"></span>
+    </label><br>
+
+    <label class="switch">
+        <input type="checkbox" id="ct3" onclick="on();">
+        <span class="slider round"></span>
+    </label>
+</div>
+
+<script>
+    let ct1 = document.getElementById("ct1");
+    let  ct2 = document.getElementById('ct2');
+    let ct3 = document.getElementById('ct3');
+
+    ct1.addEventListener("click", function() {
+        if (ct1.checked && ct2.checked) {
+            ct3.checked = false;
+        }
+    }
+    )
+
+    ct2.addEventListener("click", function() {
+        if (ct2.checked && ct3.checked) {
+            ct1.checked = false;
+        }
+    }
+    )
+
+    ct3.addEventListener("click", function() {
+        if (ct3.checked && ct1.checked) {
+            ct2.checked = false;
+        }
+    }
+    )
+</script>
+</body>
+</html>
